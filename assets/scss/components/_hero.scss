@@ -1,0 +1,15 @@
+@use '../abstract' as a;
+
+.hero {
+  grid-area: 1/2;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  max-width: 45rem;
+  margin-top: 2.5rem;
+  text-align: center;
+  
+  @include a.breakpoint(medium) {
+    gap: 2rem;
+  }
+}

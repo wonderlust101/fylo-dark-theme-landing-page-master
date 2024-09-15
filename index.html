@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="assets/css/main.css"/>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="./assets/images/logo.svg" alt="Fylo Logo">
+    <header class="section-grid">
+        <div class="header">
+            <img class="header__logo" src="./assets/images/logo.svg" alt="Fylo Logo">
 
             <nav>
                 <ul class="header__nav-flex">
@@ -27,7 +27,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="landing-page section-grid">
         <section class="hero">
             <img src="./assets/images/illustration-intro.png" alt="" role="presentation">
 
@@ -97,7 +97,7 @@
                 <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email
                     attachments required.</p>
 
-                <a class="landing-page__feature-link">
+                <a href="#" class="landing-page__feature-link">
                     <p>See how Fylo works</p>
                     <img src="./assets/images/icon-arrow.svg" alt="" role="presentation">
                 </a>
@@ -108,11 +108,11 @@
             <article class="landing-page__testimonial-section">
                 <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
                     become a well-oiled collaboration machine.</p>
-                
+
                 <div class="landing-page__testimonial-user">
                     <img class="landing-page__testimonial-image" src="./assets/images/profile-1.jpg" alt="" role="presentation">
-                    
-                    <div class="landing-page__testimonial-user-flex">
+
+                    <div class="landing-page__testimonial-user-description">
                         <p class="landing-page__testimonial-name">Satish Patel</p>
                         <p class="landing-page__testimonial-role">Founder & CEO, Huddle</p>
                     </div>
@@ -122,11 +122,11 @@
             <article class="landing-page__testimonial-section">
                 <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
                     become a well-oiled collaboration machine.</p>
-                
+
                 <div class="landing-page__testimonial-user">
                     <img class="landing-page__testimonial-image" src="./assets/images/profile-2.jpg" alt="" role="presentation">
-                    
-                    <div class="landing-page__testimonial-user-flex">
+
+                    <div class="landing-page__testimonial-user-description">
                         <p class="landing-page__testimonial-name">Bruce McKenzie</p>
                         <p class="landing-page__testimonial-role">Founder & CEO, Huddle</p>
                     </div>
@@ -136,11 +136,11 @@
             <article class="landing-page__testimonial-section">
                 <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
                     become a well-oiled collaboration machine.</p>
-                
+
                 <div class="landing-page__testimonial-user">
                     <img class="landing-page__testimonial-image" src="./assets/images/profile-3.jpg" alt="" role="presentation">
-                    
-                    <div class="landing-page__testimonial-user-flex">
+
+                    <div class="landing-page__testimonial-user-description">
                         <p class="landing-page__testimonial-name">Iva Boyd</p>
                         <p class="landing-page__testimonial-role">Founder & CEO, Huddle</p>
                     </div>
@@ -149,12 +149,12 @@
         </section>
 
         <section class="landing-page__cta">
-            <h2 class="landing-page__cta-header">Get early access today</h2>
+            <div class="landing-page__cta-text">
+                <h2 class="landing-page__cta-header">Get early access today</h2>
 
-            <p class="landing-page__cta-body">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
-                questions, our support team would be happy to help you.</p>
-
-            <a>Get Started For Free</a>
+                <p class="landing-page__cta-body">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+                    questions, our support team would be happy to help you.</p>
+            </div>
 
             <form id="cta-form" class="landing-page__cta-form" novalidate>
                 <fieldset>
@@ -171,24 +171,26 @@
             </form>
         </section>
     </main>
-    
-    <footer class="section-grid">
-        <div class="footer">
-            <img src="./assets/images/logo.svg" alt="Flyo Logo">
 
-            <div class="footer__content">
-                <div class="footer__details">
-                    <div class="footer__location">
+    <footer class="section-grid footer">
+        <div class="footer__content">
+            <img class="footer__logo" src="./assets/images/logo.svg" alt="Flyo Logo">
+
+            <div class="footer__details">
+                <div class="footer__info">
+                    <div class="footer__contact">
                         <img src="./assets/images/icon-location.svg" alt="" role="presentation">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua</p>
                     </div>
-                    <div class="footer__contact">
-                        <div>
+                    
+                    <div class="footer__contact-methods">
+                        <div class="footer__contact">
                             <img src="./assets/images/icon-phone.svg" alt="" role="presentation">
                             <p>+1-543-123-4567</p>
                         </div>
-                        <div>
+                        
+                        <div class="footer__contact">
                             <img src="./assets/images/icon-email.svg" alt="" role="presentation">
                             <p>example@fylo.com</p>
                         </div>
@@ -196,12 +198,13 @@
                 </div>
 
                 <div class="footer__links">
-                    <ul class="footer__link-flex">
+                    <ul class="footer__links-layout">
                         <li><a class="footer__link" href="#" aria-label="Go to About Us Page">About Us</a></li>
                         <li><a class="footer__link" href="#" aria-label="Go to Jobs Page">Jobs</a></li>
                         <li><a class="footer__link" href="#" aria-label="Go to Press Page">Press</a></li>
                         <li><a class="footer__link" href="#" aria-label="Go to Blog Page">Blog</a></li>
-
+                    </ul>
+                    <ul class="footer__links-layout">
                         <li><a class="footer__link" href="#" aria-label="Go to Contact Us Page">Contact Us</a></li>
                         <li><a class="footer__link" href="#" aria-label="Go to Terms Page">Terms</a></li>
                         <li><a class="footer__link" href="#" aria-label="Go to Privacy Page">Privacy</a></li>

@@ -1,0 +1,37 @@
+@use '../abstract' as a;
+
+.text-input {
+  display: grid;
+  gap: 0.5rem;
+  width: inherit;
+  position: relative;
+
+  &__field {
+    width: inherit;
+    padding: 1rem 2.5rem;
+    border: 1px solid transparent;
+    border-radius: 50rem;
+    outline: none !important;
+
+    &::placeholder {
+      color: grey;
+    }
+
+    &:focus {
+      border: 1px solid cyan;
+    }
+
+    &--error,
+    &--error:focus {
+      border: 1px solid red;
+    }
+  }
+
+  &__status {
+    display: none;
+    font-size: 0.9rem;
+    color: red;
+    text-align: left;
+    margin-left: 2.5rem;
+  }
+}

@@ -3,3 +3,12 @@
 :root {
   @include a.map-to-root(clr, a.$colors);
 }
+
+body {
+  background-color: #110320;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,81 @@
+@use '../abstract' as a;
+
+.footer {
+  background-color: #3FFD6A;
+  justify-items: center;
+
+  &__content {
+    grid-area: 1/2;
+    display: grid;
+    gap: 2rem;
+    max-width: 80rem;
+    padding: 15rem 0 5rem;
+  }
+
+  &__logo {
+    width: 6.75rem;
+  }
+
+  &__details {
+    display: grid;
+    gap: 3.5rem;
+
+    @include a.breakpoint(medium) {
+      grid-template: 1fr / 1fr max-content max-content;
+      align-items: flex-start;
+    }
+  }
+
+  &__info {
+    display: grid;
+    gap: 1.5rem;
+    
+    @include a.breakpoint(medium) {
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+    }
+  }
+
+  &__contact-methods {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  &__links {
+    display: grid;
+    gap: 3rem;
+
+    @include a.breakpoint(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  &__links-layout {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    & > * {
+      padding: 0.5rem;
+      color: var(--clr-white);
+      border: 1.5px solid var(--clr-white);
+      border-radius: 50rem;
+
+      &:hover {
+        color: cyan;
+        border: 1.5px solid cyan;
+      }
+    }
+  }
+}

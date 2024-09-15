@@ -1,0 +1,15 @@
+.button {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 50rem;
+  font-weight: 700;
+  
+  &--cyan {
+    color: var(--clr-white);
+    background: linear-gradient(135deg, #63E1D9 -42.11%, #34A0CD 100%);;
+    
+    &:hover {
+      background: #8ADAE3;
+    }
+  }
+}

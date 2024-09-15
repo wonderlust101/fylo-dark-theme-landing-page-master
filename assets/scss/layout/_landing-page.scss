@@ -1,0 +1,161 @@
+@use '../abstract' as a;
+
+.landing-page {
+  justify-items: center;
+  row-gap: 7.5rem;
+
+  &__multi-features {
+    grid-area: 2/2;
+    display: grid;
+    gap: 5rem;
+    max-width: 80rem;
+
+    @include a.breakpoint(medium) {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+  }
+
+  &__multi-features-section {
+    display: grid;
+    justify-items: center;
+    gap: 1.5rem;
+  }
+
+  &__multi-features-text {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  &__feature {
+    grid-area: 3/2;
+    display: grid;
+    justify-items: center;
+    gap: 3rem;
+    max-width: 80rem;
+
+    @include a.breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+  }
+
+  &__feature-text {
+    display: grid;
+    gap: 1rem;
+
+    @include a.breakpoint(medium) {
+      align-content: center;
+    }
+
+    & > :first-child {
+      text-align: center;
+
+      @include a.breakpoint(medium) {
+        text-align: left;
+      }
+    }
+  }
+
+  &__feature-link {
+    justify-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: cyan;
+    border-bottom: 1px solid cyan;
+
+    &:hover {
+      color: var(--clr-white);
+      border-bottom: 1px solid var(--clr-white);
+    }
+  }
+
+  &__testimonial {
+    grid-area: 4/2;
+    display: grid;
+    gap: 1.5rem;
+    max-width: 80rem;
+
+    @include a.breakpoint(medium) {
+      grid-template: 1fr / repeat(3, 1fr);
+    }
+  }
+
+  &__testimonial-section {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem 1.25rem;
+    background-color: #591B98;
+    border-radius: 0.25rem;
+
+    @include a.breakpoint(medium) {
+      gap: 1.5rem;
+      padding: 2.5rem 1.5rem 1.5rem;
+    }
+  }
+
+  &__testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__testimonial-image {
+    width: 2rem;
+    border-radius: 50rem;
+  }
+
+  &__testimonial-user-description {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  &__testimonial-name {
+    font-weight: 700;
+  }
+
+  &__testimonial-role {
+    font-size: 0.8rem;
+  }
+
+  &__cta {
+    grid-area: 5/2;
+    display: grid;
+    gap: 2rem;
+    position: relative;
+    top: 10rem;
+    margin-top: -10rem;
+    max-width: 60rem;
+    padding: 2.5rem 1.75rem;
+    background-color: #442266;
+    border-radius: 0.25rem;
+  }
+
+  &__cta-text {
+    display: grid;
+    gap: 1rem;
+
+    @include a.breakpoint(medium) {
+      text-align: center;
+    }
+  }
+
+  &__cta-form {
+    & > :first-child {
+      display: grid;
+      justify-items: center;
+      gap: 1.5rem;
+      border: none;
+      
+      @include a.breakpoint(medium){
+        grid-template-columns: 1fr max-content;
+        gap: 2rem;
+      }
+
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+}
