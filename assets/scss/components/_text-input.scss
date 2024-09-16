@@ -14,23 +14,23 @@
     outline: none !important;
 
     &::placeholder {
-      color: grey;
+      color: var(--clr-grey-500);
     }
 
     &:focus {
-      border: 1px solid cyan;
+      border: 1px solid var(--clr-cyan-500);
     }
 
     &--error,
     &--error:focus {
-      border: 1px solid red;
+      border: 1px solid var(--clr-red-500);
     }
   }
 
   &__status {
     display: none;
     font-size: 0.9rem;
-    color: red;
+    color: var(--clr-red-500);
     text-align: left;
     margin-left: 2.5rem;
   }

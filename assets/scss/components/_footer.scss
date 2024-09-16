@@ -1,15 +1,15 @@
 @use '../abstract' as a;
 
 .footer {
-  background-color: #0B1524;
+  background-color: var(--clr-blue-900);
   justify-items: center;
 
   &__content {
     grid-area: 1/2;
     display: grid;
     gap: 2rem;
-    max-width: 80rem;
     padding: 15rem 0 5rem;
+    width: 100%;
   }
 
   &__logo {
@@ -21,8 +21,10 @@
     gap: 3.5rem;
 
     @include a.breakpoint(medium) {
-      grid-template: 1fr / 1fr max-content max-content;
+      grid-template: 1fr / auto max-content max-content;
       align-items: flex-start;
+      justify-content: space-between;
+      gap: 8rem;
     }
   }
 
@@ -31,22 +33,27 @@
     gap: 1.5rem;
 
     @include a.breakpoint(medium) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr max-content;
       align-items: flex-start;
-      gap: 5rem;
     }
   }
 
   &__contact-methods {
     display: grid;
     gap: 1.25rem;
+    width: max-content;
+    
+    & > * {
+      width: max-content;
+    }
   }
 
   &__contact {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-
+    max-width: 30rem;
+    
     &--flex-start {
       @include a.breakpoint(medium) {
         align-items: flex-start;
@@ -57,7 +64,7 @@
   &__links {
     display: grid;
     gap: 3rem;
-
+    
     @include a.breakpoint(medium) {
       grid-template-columns: 1fr 1fr;
     }
@@ -66,6 +73,13 @@
   &__links-layout {
     display: grid;
     gap: 1rem;
+  }
+  
+  &__link {
+    &:hover {
+      font-weight: 700;
+      letter-spacing: -0.01785rem;
+    }
   }
 
   &__socials {
@@ -80,8 +94,8 @@
       border-radius: 50rem;
 
       &:hover {
-        color: cyan;
-        border: 1.5px solid cyan;
+        color: var(--clr-cyan-500);
+        border: 1.5px solid var(--clr-cyan-500);
       }
     }
   }

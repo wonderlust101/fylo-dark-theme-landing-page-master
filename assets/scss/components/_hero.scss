@@ -7,13 +7,13 @@
   justify-items: center;
   width: 100%;
   margin-bottom: 5rem;
-  background: url('../images/bg-curvy-mobile.svg') #1B2330 center bottom no-repeat;
+  background: url('../images/bg-curvy-mobile.svg') var(--clr-blue-800) center bottom no-repeat;
   background-size: 100%;
   
   @include a.breakpoint(medium) {
     padding-bottom: 9rem;
     margin-bottom: -5rem;
-    background: url('../images/bg-curvy-desktop.svg') #1B2330 center bottom no-repeat;
+    background: url('../images/bg-curvy-desktop.svg') var(--clr-blue-800) center bottom no-repeat;
     background-size: 100%;
   }
   
