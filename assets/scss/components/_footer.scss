@@ -10,10 +10,14 @@
     gap: 2rem;
     padding: 15rem 0 5rem;
     width: 100%;
+    
+    @include a.breakpoint(medium) {
+      gap: 3.5rem;
+    }
   }
 
   &__logo {
-    width: 6.75rem;
+    width: 8rem;
   }
 
   &__details {
