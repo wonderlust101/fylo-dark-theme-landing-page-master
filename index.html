@@ -29,14 +29,16 @@
 
     <main class="landing-page section-grid">
         <section class="hero">
-            <img src="./assets/images/illustration-intro.png" alt="" role="presentation">
+            <div class="hero__content">
+                <img src="./assets/images/illustration-intro.png" alt="" role="presentation">
 
-            <h1>All your files in one secure location, accessible anywhere.</h1>
+                <h1>All your files in one secure location, accessible anywhere.</h1>
 
-            <p>Fylo stores all your most important files in one secure location. Access them wherever
-                you need, share and collaborate with friends family, and co-workers.</p>
+                <p>Fylo stores all your most important files in one secure location. Access them wherever
+                    you need, share and collaborate with friends family, and co-workers.</p>
 
-            <a class="button button--cyan">Get Started</a>
+                <a class="button button--cyan hero__button">Get Started</a>
+            </div>
         </section>
 
         <section class="landing-page__multi-features">
@@ -44,7 +46,7 @@
                 <img src="./assets/images/icon-access-anywhere.svg" alt="" role="presentation">
 
                 <div class="landing-page__multi-features-text">
-                    <h2>Access your files, anywhere</h2>
+                    <h3>Access your files, anywhere</h3>
 
                     <p>The ability to use a smartphone, tablet, or computer to access your account means your
                         files follow you everywhere.</p>
@@ -55,7 +57,7 @@
                 <img src="./assets/images/icon-security.svg" alt="" role="presentation">
 
                 <div class="landing-page__multi-features-text">
-                    <h2>Security you can trust</h2>
+                    <h3>Security you can trust</h3>
 
                     <p>2-factor authentication and user-controlled encryption are just a couple of the security
                         features we allow to help secure your files.</p>
@@ -66,7 +68,7 @@
                 <img src="./assets/images/icon-collaboration.svg" alt="" role="presentation">
 
                 <div class="landing-page__multi-features-text">
-                    <h2>Real-time collaboration</h2>
+                    <h3>Real-time collaboration</h3>
 
                     <p>Securely share files and folders with friends, family and colleagues for live collaboration.
                         No email attachments required.</p>
@@ -77,7 +79,7 @@
                 <img src="./assets/images/icon-any-file.svg" alt="" role="presentation">
 
                 <div class="landing-page__multi-features-text">
-                    <h2>Store any type of file</h2>
+                    <h3>Store any type of file</h3>
 
                     <p>Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all
                         file types to be securely stored and shared.</p>
@@ -99,7 +101,24 @@
 
                 <a href="#" class="landing-page__feature-link">
                     <p>See how Fylo works</p>
-                    <img src="./assets/images/icon-arrow.svg" alt="" role="presentation">
+                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation">
+                        <defs>
+                            <circle id="b" cx="6" cy="6" r="6"/>
+                            <filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="a">
+                                <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+                                <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+                                <feColorMatrix values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0"
+                                               in="shadowBlurOuter1"/>
+                            </filter>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                            <g transform="translate(2 2)">
+                                <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+                                <use fill="currentcolor" xlink:href="#b"/>
+                            </g>
+                            <path d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z" fill="#1B2330"/>
+                        </g>
+                    </svg>
                 </a>
             </div>
         </section>
@@ -178,18 +197,18 @@
 
             <div class="footer__details">
                 <div class="footer__info">
-                    <div class="footer__contact">
+                    <div class="footer__contact footer__contact--flex-start">
                         <img src="./assets/images/icon-location.svg" alt="" role="presentation">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua</p>
                     </div>
-                    
+
                     <div class="footer__contact-methods">
                         <div class="footer__contact">
                             <img src="./assets/images/icon-phone.svg" alt="" role="presentation">
                             <p>+1-543-123-4567</p>
                         </div>
-                        
+
                         <div class="footer__contact">
                             <img src="./assets/images/icon-email.svg" alt="" role="presentation">
                             <p>example@fylo.com</p>

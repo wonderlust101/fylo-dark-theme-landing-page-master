@@ -1,15 +1,37 @@
 @use '../abstract' as a;
 
 .hero {
-  grid-area: 1/2;
+  grid-area: 1/1 / 1/5;
   display: grid;
-  gap: 1rem;
+  grid-template-columns: 1fr min(120rem, 100% - (2 * 2rem)) 1fr;
   justify-items: center;
-  max-width: 45rem;
-  margin-top: 2.5rem;
-  text-align: center;
+  width: 100%;
+  margin-bottom: 5rem;
+  background: url('../images/bg-curvy-mobile.svg') #1B2330 center bottom no-repeat;
+  background-size: 100%;
   
   @include a.breakpoint(medium) {
-    gap: 2rem;
+    padding-bottom: 9rem;
+    margin-bottom: -5rem;
+    background: url('../images/bg-curvy-desktop.svg') #1B2330 center bottom no-repeat;
+    background-size: 100%;
+  }
+  
+  &__content {
+    grid-area: 1/2;
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    max-width: 45rem;
+    margin-top: 2.5rem;
+    text-align: center;
+
+    @include a.breakpoint(medium) {
+      gap: 2rem;
+    }
+  }
+  
+  &__button {
+    width: min(60%, 20rem);
   }
 }

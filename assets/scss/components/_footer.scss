@@ -1,7 +1,7 @@
 @use '../abstract' as a;
 
 .footer {
-  background-color: #3FFD6A;
+  background-color: #0B1524;
   justify-items: center;
 
   &__content {
@@ -29,10 +29,11 @@
   &__info {
     display: grid;
     gap: 1.5rem;
-    
+
     @include a.breakpoint(medium) {
       grid-template-columns: 1fr 1fr;
       align-items: flex-start;
+      gap: 5rem;
     }
   }
 
@@ -43,8 +44,14 @@
 
   &__contact {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.5rem;
+
+    &--flex-start {
+      @include a.breakpoint(medium) {
+        align-items: flex-start;
+      }
+    }
   }
 
   &__links {
@@ -55,7 +62,7 @@
       grid-template-columns: 1fr 1fr;
     }
   }
-  
+
   &__links-layout {
     display: grid;
     gap: 1rem;
